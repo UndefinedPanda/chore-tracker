@@ -1,0 +1,23 @@
+{
+  "name": "chore-tracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build":"tsc",
+    "dev": "ts-node src/main.ts",
+    "start":"node dist/main.js"
+  },
+  "keywords": [],
+  "author": "Dalton Pineault",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
