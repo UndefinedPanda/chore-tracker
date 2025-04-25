@@ -13,6 +13,6 @@ const app = express();
 app.use(express.json());
 
 app.use('/children', childRouter);
-app.use('/chores', choreRouter);
+app.use('/child/chores', choreRouter);
 
 app.listen(PORT, () => console.log(`Server has started on port: ${PORT}`));

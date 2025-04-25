@@ -124,6 +124,7 @@ exports.Prisma.ChoreScalarFieldEnum = {
   name: 'name',
   description: 'description',
   finished: 'finished',
+  day_of_week: 'day_of_week',
   childId: 'childId'
 };
 

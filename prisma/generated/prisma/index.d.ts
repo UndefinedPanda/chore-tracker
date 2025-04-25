@@ -2080,6 +2080,7 @@ export namespace Prisma {
     name: string | null
     description: string | null
     finished: boolean | null
+    day_of_week: string | null
     childId: number | null
   }
 
@@ -2088,6 +2089,7 @@ export namespace Prisma {
     name: string | null
     description: string | null
     finished: boolean | null
+    day_of_week: string | null
     childId: number | null
   }
 
@@ -2096,6 +2098,7 @@ export namespace Prisma {
     name: number
     description: number
     finished: number
+    day_of_week: number
     childId: number
     _all: number
   }
@@ -2116,6 +2119,7 @@ export namespace Prisma {
     name?: true
     description?: true
     finished?: true
+    day_of_week?: true
     childId?: true
   }
 
@@ -2124,6 +2128,7 @@ export namespace Prisma {
     name?: true
     description?: true
     finished?: true
+    day_of_week?: true
     childId?: true
   }
 
@@ -2132,6 +2137,7 @@ export namespace Prisma {
     name?: true
     description?: true
     finished?: true
+    day_of_week?: true
     childId?: true
     _all?: true
   }
@@ -2227,6 +2233,7 @@ export namespace Prisma {
     name: string
     description: string | null
     finished: boolean
+    day_of_week: string
     childId: number
     _count: ChoreCountAggregateOutputType | null
     _avg: ChoreAvgAggregateOutputType | null
@@ -2254,6 +2261,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     finished?: boolean
+    day_of_week?: boolean
     childId?: boolean
     child?: boolean | ChildDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["chore"]>
@@ -2263,6 +2271,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     finished?: boolean
+    day_of_week?: boolean
     childId?: boolean
     child?: boolean | ChildDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["chore"]>
@@ -2272,6 +2281,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     finished?: boolean
+    day_of_week?: boolean
     childId?: boolean
     child?: boolean | ChildDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["chore"]>
@@ -2281,10 +2291,11 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     finished?: boolean
+    day_of_week?: boolean
     childId?: boolean
   }
 
-  export type ChoreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "finished" | "childId", ExtArgs["result"]["chore"]>
+  export type ChoreOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "finished" | "day_of_week" | "childId", ExtArgs["result"]["chore"]>
   export type ChoreInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     child?: boolean | ChildDefaultArgs<ExtArgs>
   }
@@ -2305,6 +2316,7 @@ export namespace Prisma {
       name: string
       description: string | null
       finished: boolean
+      day_of_week: string
       childId: number
     }, ExtArgs["result"]["chore"]>
     composites: {}
@@ -2734,6 +2746,7 @@ export namespace Prisma {
     readonly name: FieldRef<"Chore", 'String'>
     readonly description: FieldRef<"Chore", 'String'>
     readonly finished: FieldRef<"Chore", 'Boolean'>
+    readonly day_of_week: FieldRef<"Chore", 'String'>
     readonly childId: FieldRef<"Chore", 'Int'>
   }
     
@@ -3171,6 +3184,7 @@ export namespace Prisma {
     name: 'name',
     description: 'description',
     finished: 'finished',
+    day_of_week: 'day_of_week',
     childId: 'childId'
   };
 
@@ -3279,6 +3293,7 @@ export namespace Prisma {
     name?: StringFilter<"Chore"> | string
     description?: StringNullableFilter<"Chore"> | string | null
     finished?: BoolFilter<"Chore"> | boolean
+    day_of_week?: StringFilter<"Chore"> | string
     childId?: IntFilter<"Chore"> | number
     child?: XOR<ChildScalarRelationFilter, ChildWhereInput>
   }
@@ -3288,6 +3303,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrderInput | SortOrder
     finished?: SortOrder
+    day_of_week?: SortOrder
     childId?: SortOrder
     child?: ChildOrderByWithRelationInput
   }
@@ -3300,6 +3316,7 @@ export namespace Prisma {
     name?: StringFilter<"Chore"> | string
     description?: StringNullableFilter<"Chore"> | string | null
     finished?: BoolFilter<"Chore"> | boolean
+    day_of_week?: StringFilter<"Chore"> | string
     childId?: IntFilter<"Chore"> | number
     child?: XOR<ChildScalarRelationFilter, ChildWhereInput>
   }, "id">
@@ -3309,6 +3326,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrderInput | SortOrder
     finished?: SortOrder
+    day_of_week?: SortOrder
     childId?: SortOrder
     _count?: ChoreCountOrderByAggregateInput
     _avg?: ChoreAvgOrderByAggregateInput
@@ -3325,6 +3343,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"Chore"> | string
     description?: StringNullableWithAggregatesFilter<"Chore"> | string | null
     finished?: BoolWithAggregatesFilter<"Chore"> | boolean
+    day_of_week?: StringWithAggregatesFilter<"Chore"> | string
     childId?: IntWithAggregatesFilter<"Chore"> | number
   }
 
@@ -3368,6 +3387,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     finished?: boolean
+    day_of_week: string
     child: ChildCreateNestedOneWithoutChoresInput
   }
 
@@ -3376,6 +3396,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     finished?: boolean
+    day_of_week: string
     childId: number
   }
 
@@ -3383,6 +3404,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     finished?: BoolFieldUpdateOperationsInput | boolean
+    day_of_week?: StringFieldUpdateOperationsInput | string
     child?: ChildUpdateOneRequiredWithoutChoresNestedInput
   }
 
@@ -3391,6 +3413,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     finished?: BoolFieldUpdateOperationsInput | boolean
+    day_of_week?: StringFieldUpdateOperationsInput | string
     childId?: IntFieldUpdateOperationsInput | number
   }
 
@@ -3399,6 +3422,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     finished?: boolean
+    day_of_week: string
     childId: number
   }
 
@@ -3406,6 +3430,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     finished?: BoolFieldUpdateOperationsInput | boolean
+    day_of_week?: StringFieldUpdateOperationsInput | string
   }
 
   export type ChoreUncheckedUpdateManyInput = {
@@ -3413,6 +3438,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     finished?: BoolFieldUpdateOperationsInput | boolean
+    day_of_week?: StringFieldUpdateOperationsInput | string
     childId?: IntFieldUpdateOperationsInput | number
   }
 
@@ -3541,6 +3567,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     finished?: SortOrder
+    day_of_week?: SortOrder
     childId?: SortOrder
   }
 
@@ -3554,6 +3581,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     finished?: SortOrder
+    day_of_week?: SortOrder
     childId?: SortOrder
   }
 
@@ -3562,6 +3590,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     finished?: SortOrder
+    day_of_week?: SortOrder
     childId?: SortOrder
   }
 
@@ -3799,6 +3828,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     finished?: boolean
+    day_of_week: string
   }
 
   export type ChoreUncheckedCreateWithoutChildInput = {
@@ -3806,6 +3836,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     finished?: boolean
+    day_of_week: string
   }
 
   export type ChoreCreateOrConnectWithoutChildInput = {
@@ -3841,6 +3872,7 @@ export namespace Prisma {
     name?: StringFilter<"Chore"> | string
     description?: StringNullableFilter<"Chore"> | string | null
     finished?: BoolFilter<"Chore"> | boolean
+    day_of_week?: StringFilter<"Chore"> | string
     childId?: IntFilter<"Chore"> | number
   }
 
@@ -3883,12 +3915,14 @@ export namespace Prisma {
     name: string
     description?: string | null
     finished?: boolean
+    day_of_week: string
   }
 
   export type ChoreUpdateWithoutChildInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     finished?: BoolFieldUpdateOperationsInput | boolean
+    day_of_week?: StringFieldUpdateOperationsInput | string
   }
 
   export type ChoreUncheckedUpdateWithoutChildInput = {
@@ -3896,6 +3930,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     finished?: BoolFieldUpdateOperationsInput | boolean
+    day_of_week?: StringFieldUpdateOperationsInput | string
   }
 
   export type ChoreUncheckedUpdateManyWithoutChildInput = {
@@ -3903,6 +3938,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     finished?: BoolFieldUpdateOperationsInput | boolean
+    day_of_week?: StringFieldUpdateOperationsInput | string
   }
 
 

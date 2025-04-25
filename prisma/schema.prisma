@@ -22,6 +22,7 @@ model Chore {
   name        String
   description String?
   finished    Boolean @default(false)
+  day_of_week String
   child       Child   @relation(fields: [childId], references: [id])
   childId     Int
 }
